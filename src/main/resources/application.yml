@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: Config-and-FF-Service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/config-and-feature-flag-service
+    username: postgres
+    password: localdocker
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+# IMPORTANT: disable Spring Boot Docker Compose auto-connection stuff
+spring.docker.compose.enabled: false
